@@ -190,7 +190,9 @@ iframe {
   border-bottom: 1px solid #f2f2f2;
 }
 .row .cell:hover{
-  background-color: aqua;
+  background-color:#6c7ae0;
+  opacity: 100%;
+  color: white;
 }
 
 .row.header .cell {
@@ -237,7 +239,7 @@ iframe {
 
 .row:hover {
   background-color: #ececff;
-  cursor: pointer;
+
 }
 
 @media (max-width: 768px) {

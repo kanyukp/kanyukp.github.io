@@ -65,6 +65,19 @@
 			});   
 		});
 	</script>
+	<script>
+		function priceSort(){
+			var price = "tixPrice";
+			for (let i = 0; i < 17; i++){
+				var priceLabel = price.concat(i);
+				console.log(priceLabel);
+				if(document.getElementById(priceLabel).innerHTML == 1){
+					console.log(document.getElementById(priceLabel).innerHTML);
+					document.getElementById(priceLabel).style.backgroundColor= "lightgray";
+				} 
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="header">
@@ -80,7 +93,7 @@
 							<div class="cell">
 								Ticekt Name
 							</div>
-							<div class="cell">
+							<div class="cell" onclick="priceSort()">
 								Price
 							</div>
 							<div class="cell">
@@ -95,8 +108,7 @@
 							<div class="cell" data-title="Full Name" id="tixName0">
 						
 							</div>
-							<div class="cell" data-title="Age" id="tixPrice0">
-								
+							<div class="cell" data-title="Age" id="tixPrice0">	
 							</div>
 							<div class="cell" data-title="Job Title" id="tixInitExpVal0">
 							</div>
@@ -109,8 +121,7 @@
 							<div class="cell" data-title="Full Name" id="tixName1">
 
 							</div>
-							<div class="cell" data-title="Age" id="tixPrice1">
-								
+							<div class="cell" data-title="Age" id="tixPrice1">	
 							</div>
 							<div class="cell" data-title="Job Title" id="tixInitExpVal1">
 
@@ -125,7 +136,6 @@
 
 							</div>
 							<div class="cell" data-title="Age"id="tixPrice2">
-								
 							</div>
 							<div class="cell" data-title="Job Title" id="tixInitExpVal2">
 
