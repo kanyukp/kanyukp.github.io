@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V02</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>	
+		jQuery.get('ticket_names.txt', function (data) {
+			var lines = data.split("\n");
+			var cellName = "#tixName";
+			$.each(lines, function (n, elem) {
+				var name = cellName.concat(n);
+        		$(name).append(elem);
+		
+   			});   
+		});
+	</script>
+	<script>	
+		jQuery.get('ticket_expvals.txt', function (data) {
+			var lines = data.split("\n");
+			var cellName = "#tixInitExpVal";
+			$.each(lines, function (n, elem) {
+			var name = cellName.concat(n);
+			$(name).append(elem);
+			
+		    });   
+		});
+	</script>
+	<script>
+		jQuery.get('ticket_estvals.txt', function (data) {
+			var lines = data.split("\n");
+			var cellName = "#tixEstExpVal";
+			$.each(lines, function (n, elem) {
+			var name = cellName.concat(n);
+			$(name).append(elem);
+					
+			});   
+		});
+	</script>
+	<script>	
+		jQuery.get('ticket_price_and_number.txt', function (data) {
+			var lines = data.split("\n");
+			var cellName = "#tixPrice";
+			$.each(lines, function (n, elem) {
+			var name = cellName.concat(n);
+			$(name).append(elem);
+					
+			});   
+		});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<h1 class="title">NJ Lotto Tickets</h1>
+	</div>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+					<div class="table">
+
+						<div class="row header">
+							<div class="cell">
+								Ticekt Name
+							</div>
+							<div class="cell">
+								Price
+							</div>
+							<div class="cell">
+								Initial </br> Expected Value
+							</div>
+							<div class="cell">
+								Current Estimated Expected Value
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName0">
+						
+							</div>
+							<div class="cell" data-title="Age" id="tixPrice0">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal0">
+							</div>
+							<div class="cell" data-title="Location" id="tixEstExpVal0">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName1">
+
+							</div>
+							<div class="cell" data-title="Age" id="tixPrice1">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal1">
+
+							</div>
+							<div class="cell" data-title="Location" id="tixEstExpVal1">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName2">
+
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice2">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal2">
+
+							</div>
+							<div class="cell" data-title="Location" id="tixEstExpVal2">
+								 
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName3">
+
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice3">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal3">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal3">
+								 
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName4">
+
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice4">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal4">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal4">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName5">
+
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice5">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal5">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal5">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName6">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice6">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal6">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal6">
+								
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName7">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice7">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal7">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal7">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName8">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice8">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal8">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal8">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName9">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice9">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal9">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal9">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName10">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice10">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal10">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal10">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName11">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice11">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal11">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal11">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName12">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice12">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal12">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal12">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName13">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice13">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal13">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal13">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName14">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice14">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal14">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal14">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName15">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice15">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal15">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal15">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell" data-title="Full Name" id="tixName16">
+								 
+							</div>
+							<div class="cell" data-title="Age"id="tixPrice16">
+								
+							</div>
+							<div class="cell" data-title="Job Title" id="tixInitExpVal16">
+
+							</div>
+							<div class="cell" data-title="Location"id="tixEstExpVal16">
+								
+							</div>
+						</div>
+
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!--	 -->
+
+</body>
+</html>
