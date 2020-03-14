@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css"> -->
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -68,14 +68,21 @@
 	<script>
 		function priceSort(){
 			var price = "tixPrice";
+			var row = "row";
 			for (let i = 0; i < 17; i++){
 				var priceLabel = price.concat(i);
+				var rowLabel = row.concat(i);
 				console.log(priceLabel);
 				if(document.getElementById(priceLabel).innerHTML == 1){
-					console.log(document.getElementById(priceLabel).innerHTML);
-					document.getElementById(priceLabel).style.backgroundColor= "lightgray";
+					//console.log(document.getElementById(priceLabel).innerHTML);
+					//document.getElementById(rowLabel).style.backgroundColor= "lightgray";
 				} 
 			}
+		}
+	</script>
+	<script>
+		function showModal(){
+			document.getElementById('modal').style.display = 'block';
 		}
 	</script>
 </head>
@@ -83,8 +90,39 @@
 	<div class="header">
 		<h1 class="title">NJ Lotto Tickets</h1>
 	</div>
-	
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<div class="close1">x</div>
+			<div class="modalHeader">Filter</div>
+		<form class="filterForm">
+			<p>
+			<input type="checkbox" checked="true" id="checkBox1" class="priceBox">
+			<label class="textb">&nbsp;$ 1</label>
+			<input type="checkbox" checked="true" id="checkBox2"class="priceBox"> 
+			<label>&nbsp;$ 2</label></p>
+			<p>
+			<input type="checkbox" checked="true" id="checkBox3"class="priceBox">
+			<label>&nbsp;$ 3</label>
+			<input type="checkbox" checked="true" id="checkBox5"class="priceBox"> 
+			<label>&nbsp;$ 5</label></p>
+			<p>
+			<input type="checkbox" checked="true" id="checkBox10"class="priceBox">
+			<label>$10</label>
+			<input type="checkbox" checked="true" id="checkBox20"class="priceBox">
+			<label>$20</label></p>
+			<p>
+			<input type="checkbox" checked="true" id="checkBox25"class="priceBox">
+			<label>$25</label>
+			<input type="checkbox" checked="true" id="checkBox30"class="priceBox">
+			<label>$30</label></p>
+			<button onclick="filter()">Confirm</button>
+		</form>
+		</div>
+	</div>
 	<div class="limiter">
+		<div id="filter">
+			<button id="filterButton" onclick="showModal()">Filter</button>
+		</div>
 		<div class="container-table100">
 			<div class="wrap-table100">
 					<div class="table">
@@ -104,7 +142,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row0">
 							<div class="cell" data-title="Full Name" id="tixName0">
 						
 							</div>
@@ -117,7 +155,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row1">
 							<div class="cell" data-title="Full Name" id="tixName1">
 
 							</div>
@@ -131,7 +169,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row"id="row2">
 							<div class="cell" data-title="Full Name" id="tixName2">
 
 							</div>
@@ -145,7 +183,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row3">
 							<div class="cell" data-title="Full Name" id="tixName3">
 
 							</div>
@@ -160,7 +198,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row4">
 							<div class="cell" data-title="Full Name" id="tixName4">
 
 							</div>
@@ -175,7 +213,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row5">
 							<div class="cell" data-title="Full Name" id="tixName5">
 
 							</div>
@@ -190,7 +228,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row6"> 
 							<div class="cell" data-title="Full Name" id="tixName6">
 								 
 							</div>
@@ -205,7 +243,7 @@
 							</div>
 						</div>
 
-						<div class="row">
+						<div class="row" id="row7">
 							<div class="cell" data-title="Full Name" id="tixName7">
 								 
 							</div>
@@ -219,7 +257,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row8">
 							<div class="cell" data-title="Full Name" id="tixName8">
 								 
 							</div>
@@ -233,7 +271,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row9">
 							<div class="cell" data-title="Full Name" id="tixName9">
 								 
 							</div>
@@ -247,7 +285,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row10">
 							<div class="cell" data-title="Full Name" id="tixName10">
 								 
 							</div>
@@ -261,7 +299,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row11">
 							<div class="cell" data-title="Full Name" id="tixName11">
 								 
 							</div>
@@ -275,7 +313,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row12">
 							<div class="cell" data-title="Full Name" id="tixName12">
 								 
 							</div>
@@ -289,7 +327,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row13">
 							<div class="cell" data-title="Full Name" id="tixName13">
 								 
 							</div>
@@ -303,7 +341,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row14">
 							<div class="cell" data-title="Full Name" id="tixName14">
 								 
 							</div>
@@ -317,7 +355,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row15">
 							<div class="cell" data-title="Full Name" id="tixName15">
 								 
 							</div>
@@ -331,7 +369,7 @@
 								
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="row16">
 							<div class="cell" data-title="Full Name" id="tixName16">
 								 
 							</div>
